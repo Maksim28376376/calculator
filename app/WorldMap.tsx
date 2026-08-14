@@ -13,6 +13,7 @@ import {
   buckets,
   NO_DATA_COLOR,
   countries,
+  specials,
 } from "./data";
 import { fighters } from "./fighters";
 import FighterAvatar from "./FighterAvatar";
@@ -22,6 +23,7 @@ import FighterAvatar from "./FighterAvatar";
 const ANTARCTICA_ID = "010";
 
 type RenderedPath = { id: string; d: string; name: string };
+type Marker = { id: string; name: string; count: number; x: number; y: number };
 type Hovered = { id: string; name: string } | null;
 
 export default function WorldMap() {
@@ -37,7 +39,10 @@ export default function WorldMap() {
     setFighterOpen(true);
   }
 
-  const paths = useMemo<RenderedPath[]>(() => {
+  const { paths, markers } = useMemo<{
+    paths: RenderedPath[];
+    markers: Marker[];
+  }>(() => {
     const fc = feature(
       topo as never,
       (topo as never as { objects: { countries: unknown } }).objects.countries as never
@@ -56,15 +61,29 @@ export default function WorldMap() {
     );
     const path = geoPath(projection);
 
-    return feats.map((f) => ({
+    const paths = feats.map((f) => ({
       id: String(f.id),
       d: path(f) ?? "",
       name: f.properties?.name ?? "Unknown",
     }));
+
+    // Places with no separate atlas shape (e.g. Hawaii) get a projected point.
+    const markers = specials.map((s) => {
+      const p = projection([s.lon, s.lat]);
+      return {
+        id: s.id,
+        name: s.name,
+        count: s.count,
+        x: p ? p[0] : 0,
+        y: p ? p[1] : 0,
+      };
+    });
+
+    return { paths, markers };
   }, []);
 
   const ranked = useMemo(
-    () => [...countries].sort((a, b) => b.count - a.count),
+    () => [...countries, ...specials].sort((a, b) => b.count - a.count),
     []
   );
   const rankOf = useMemo(() => {
@@ -168,6 +187,46 @@ export default function WorldMap() {
                   }}
                   onClick={() => data && selectCountry(p.id)}
                 />
+              );
+            })}
+
+            {/* Point markers for places with no separate atlas shape (Hawaii). */}
+            {markers.map((m) => {
+              const isActive = activeId === m.id;
+              return (
+                <g
+                  key={m.id}
+                  className={styles.marker}
+                  onMouseEnter={(e) => {
+                    setHovered({ id: m.id, name: m.name });
+                    moveTip(e);
+                  }}
+                  onClick={() => selectCountry(m.id)}
+                >
+                  <circle
+                    cx={m.x}
+                    cy={m.y}
+                    r={isActive ? 12 : 9}
+                    fill={colorFor(m.count)}
+                    opacity={0.28}
+                  />
+                  <circle
+                    cx={m.x}
+                    cy={m.y}
+                    r={isActive ? 6 : 5}
+                    fill={colorFor(m.count)}
+                    stroke="#fff"
+                    strokeWidth={1.5}
+                  />
+                  <text
+                    x={m.x}
+                    y={m.y - 12}
+                    textAnchor="middle"
+                    className={styles.markerLabel}
+                  >
+                    {m.name}
+                  </text>
+                </g>
               );
             })}
           </svg>

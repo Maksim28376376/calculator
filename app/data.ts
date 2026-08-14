@@ -89,7 +89,7 @@ export const countries: Country[] = [
     name: "Poland",
     count: 30,
     blurb:
-      "Deep talent across the cards, headlined by strawweight Hall of Famer Joanna Jędrzejczyk and former light heavyweight champion Jan Błachowicz.",
+      "Deep talent across the cards, from former light heavyweight champion Jan Błachowicz to strawweight Hall of Famer Joanna Jędrzejczyk.",
   },
   {
     id: "410",
@@ -518,6 +518,30 @@ export const countries: Country[] = [
     blurb:
       "An emerging Middle Eastern scene with bantamweight trailblazer Ali AlQaisi.",
   },
+  {
+    id: "104",
+    name: "Myanmar",
+    count: 2,
+    blurb:
+      "Put on the UFC map by all-action flyweight sensation Joshua Van.",
+  },
+];
+
+// "Specials" are places we show as their own point on the map even though the
+// country atlas doesn't give them a separate shape (e.g. Hawaii, a US state).
+// They carry lon/lat so the map can drop a marker at the right spot.
+export type Special = Country & { lon: number; lat: number };
+
+export const specials: Special[] = [
+  {
+    id: "HAWAII",
+    name: "Hawaii",
+    count: 15,
+    lon: -157.5,
+    lat: 20.7,
+    blurb:
+      "A fight-mad island chain far out in the Pacific, home to featherweight great Max Holloway.",
+  },
 ];
 
 export const totalFighters = countries.reduce((s, c) => s + c.count, 0);
@@ -545,5 +569,5 @@ export function colorFor(count: number | undefined): string {
 }
 
 export const byId: Map<string, Country> = new Map(
-  countries.map((c) => [c.id, c])
+  [...countries, ...specials].map((c) => [c.id, c])
 );

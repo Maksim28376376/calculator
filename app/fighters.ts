@@ -22,10 +22,10 @@ export const fighters: Record<string, Fighter> = {
     look: { skin: "#8a5a3b", hair: "#111318", hairStyle: "cornrows", facial: "none", trunks: "#3c3b6e", trunksAccent: "#b22234", gloves: "#b22234" },
   },
   "076": {
-    name: "Anderson Silva",
-    bio: "The “Spider” — a middleweight king whose title reign redefined striking in MMA.",
-    fact: "Holds the UFC records for the longest title reign, with 10 straight title defenses and a 16-fight win streak.",
-    look: { skin: "#a06a44", hair: "#111318", hairStyle: "bald", facial: "goatee", trunks: "#009c3b", trunksAccent: "#ffdf00", gloves: "#009c3b" },
+    name: "Charles Oliveira",
+    bio: "“Do Bronx” — a former lightweight champion and submission wizard.",
+    fact: "Holds the UFC records for the most finishes and the most submission wins in company history.",
+    look: { skin: "#a06a44", hair: "#111318", hairStyle: "short", facial: "beard", trunks: "#009c3b", trunksAccent: "#ffdf00", gloves: "#009c3b" },
   },
   "643": {
     name: "Khabib Nurmagomedov",
@@ -76,10 +76,10 @@ export const fighters: Record<string, Fighter> = {
     look: { skin: "#c98a5e", hair: "#111318", hairStyle: "buzz", facial: "stubble", trunks: "#0055a4", trunksAccent: "#ef4135", gloves: "#ffffff" },
   },
   "616": {
-    name: "Joanna Jędrzejczyk",
-    bio: "A UFC Hall of Famer and one of the greatest strikers in women's MMA.",
-    fact: "Dominated the strawweight division with five straight title defenses on her way to the Hall of Fame.",
-    look: { skin: "#eecb9a", hair: "#e8d29a", hairStyle: "ponytail", facial: "none", trunks: "#ffffff", trunksAccent: "#dc143c", gloves: "#dc143c", female: true },
+    name: "Jan Błachowicz",
+    bio: "Former light heavyweight champion with legendary Polish power.",
+    fact: "Defended his title by out-pointing Israel Adesanya, handing “The Last Stylebender” his first pro loss.",
+    look: { skin: "#eab98f", hair: "#6a4a2a", hairStyle: "short", facial: "stubble", trunks: "#ffffff", trunksAccent: "#dc143c", gloves: "#dc143c" },
   },
   "410": {
     name: "Chan Sung Jung",
@@ -106,10 +106,10 @@ export const fighters: Record<string, Fighter> = {
     look: { skin: "#eecb9a", hair: "#d9b26a", hairStyle: "slick", facial: "stubble", trunks: "#006aa7", trunksAccent: "#fecc02", gloves: "#006aa7" },
   },
   "804": {
-    name: "Nikita Krylov",
-    bio: "“The Miner” — a hard-hitting Ukrainian light heavyweight.",
-    fact: "Built his reputation as a finisher, winning the vast majority of his fights inside the distance.",
-    look: { skin: "#eab98f", hair: "#6a4a2a", hairStyle: "short", facial: "none", trunks: "#0057b7", trunksAccent: "#ffd700", gloves: "#ffd700" },
+    name: "Yaroslav Amosov",
+    bio: "An undefeated Ukrainian welterweight and former Bellator champion.",
+    fact: "Won his first two UFC fights by submission after famously returning home to defend Ukraine during the war.",
+    look: { skin: "#eab98f", hair: "#6a4a2a", hairStyle: "short", facial: "stubble", trunks: "#0057b7", trunksAccent: "#ffd700", gloves: "#ffd700" },
   },
   "032": {
     name: "Santiago Ponzinibbio",
@@ -124,10 +124,10 @@ export const fighters: Record<string, Fighter> = {
     look: { skin: "#f0c8a0", hair: "#3a2a1a", hairStyle: "slick", facial: "fullbeard", trunks: "#169b62", trunksAccent: "#ff883e", gloves: "#e8b800" },
   },
   "554": {
-    name: "Israel Adesanya",
-    bio: "“The Last Stylebender” — an elite kickboxer and former middleweight champion.",
-    fact: "Was unbeaten through his first 20 pro MMA fights before losing a light heavyweight title bid.",
-    look: { skin: "#7a4a2c", hair: "#111318", hairStyle: "afro", facial: "none", trunks: "#000000", trunksAccent: "#00247d", gloves: "#c8102e" },
+    name: "Mark Hunt",
+    bio: "“The Super Samoan” — a knockout-artist heavyweight and combat-sports cult hero.",
+    fact: "Won the 2001 K-1 World Grand Prix before a legendary UFC run built on walk-off knockouts.",
+    look: { skin: "#8a5a3b", hair: "#111318", hairStyle: "bald", facial: "goatee", trunks: "#000000", trunksAccent: "#ffffff", gloves: "#000000" },
   },
   "268": {
     name: "Merab Dvalishvili",
@@ -446,5 +446,17 @@ export const fighters: Record<string, Fighter> = {
     bio: "A Jordanian bantamweight and regional trailblazer.",
     fact: "One of the first fighters to carry the Jordanian flag into the UFC.",
     look: { skin: "#d29a68", hair: "#111318", hairStyle: "short", facial: "beard", trunks: "#000000", trunksAccent: "#ce1126", gloves: "#007a3d" },
+  },
+  "104": {
+    name: "Joshua Van",
+    bio: "A young, crowd-pleasing flyweight and the fighting pride of Myanmar.",
+    fact: "Became a fan favorite for his relentless, all-action fights, racking up post-fight bonuses.",
+    look: { skin: "#c98a5e", hair: "#111318", hairStyle: "short", facial: "none", trunks: "#fecb00", trunksAccent: "#34b233", gloves: "#ea2839" },
+  },
+  "HAWAII": {
+    name: "Max Holloway",
+    bio: "“Blessed” — a former featherweight champion and the BMF titleholder from Hawaii.",
+    fact: "Holds the UFC record for most significant strikes landed, and once knocked out Justin Gaethje in the final second of their fight.",
+    look: { skin: "#c98a5e", hair: "#111318", hairStyle: "short", facial: "beard", trunks: "#d21034", trunksAccent: "#ffffff", gloves: "#00247d" },
   },
 };
