@@ -6,7 +6,7 @@ export default function Home() {
     <main className="page">
       <header className="header">
         <p className="eyebrow">MMA · Data Map</p>
-        <h1 className="title">UFC Fighters by Country</h1>
+        <h1 className="title">UFC Map</h1>
         <p className="subtitle">
           Where the UFC roster comes from. Redder countries send more fighters
           to the octagon — hover for a count, or select a country to read about
