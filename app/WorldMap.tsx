@@ -14,6 +14,8 @@ import {
   NO_DATA_COLOR,
   countries,
 } from "./data";
+import { fighters } from "./fighters";
+import FighterAvatar from "./FighterAvatar";
 
 // Antarctica dominates the frame and carries no data, so we drop it before
 // fitting the projection — the inhabited world then fills the viewport.
@@ -26,7 +28,14 @@ export default function WorldMap() {
   const wrapRef = useRef<HTMLDivElement>(null);
   const [hovered, setHovered] = useState<Hovered>(null);
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [fighterOpen, setFighterOpen] = useState(false);
   const [tip, setTip] = useState<{ x: number; y: number } | null>(null);
+
+  // Selecting a country opens the fighter panel; the close button just hides it.
+  function selectCountry(id: string) {
+    setSelectedId(id);
+    setFighterOpen(true);
+  }
 
   const paths = useMemo<RenderedPath[]>(() => {
     const fc = feature(
@@ -75,8 +84,48 @@ export default function WorldMap() {
 
   const hoveredCount = hovered ? byId.get(hovered.id)?.count : undefined;
 
+  const fighter =
+    selectedId && fighterOpen ? fighters[selectedId] ?? null : null;
+  const fighterCountry = selectedId ? byId.get(selectedId) : undefined;
+
   return (
     <div className={styles.layout}>
+      {/* Left slide-in panel: the country's most famous fighter as an anime
+          character, with a short bio and a career fact. */}
+      <div
+        className={`${styles.fighterPanel} ${
+          fighter ? styles.fighterOpen : ""
+        }`}
+        aria-hidden={!fighter}
+      >
+        {fighter && (
+          <>
+            <button
+              type="button"
+              className={styles.fighterClose}
+              onClick={() => setFighterOpen(false)}
+              aria-label="Close fighter"
+            >
+              ×
+            </button>
+            <div className={styles.fighterArt}>
+              <FighterAvatar look={fighter.look} className={styles.avatar} />
+            </div>
+            <div className={styles.fighterInfo}>
+              <span className={styles.fighterFlagline}>
+                Most famous from {fighterCountry?.name}
+              </span>
+              <h2 className={styles.fighterName}>{fighter.name}</h2>
+              <p className={styles.fighterBio}>{fighter.bio}</p>
+              <div className={styles.factCard}>
+                <span className={styles.factLabel}>Career fact</span>
+                <p className={styles.factText}>{fighter.fact}</p>
+              </div>
+            </div>
+          </>
+        )}
+      </div>
+
       <div className={styles.mapCard}>
         <div
           className={styles.mapWrap}
@@ -117,7 +166,7 @@ export default function WorldMap() {
                     setHovered({ id: p.id, name: data?.name ?? p.name });
                     moveTip(e);
                   }}
-                  onClick={() => data && setSelectedId(p.id)}
+                  onClick={() => data && selectCountry(p.id)}
                 />
               );
             })}
@@ -204,7 +253,7 @@ export default function WorldMap() {
                   ]
                     .filter(Boolean)
                     .join(" ")}
-                  onClick={() => setSelectedId(c.id)}
+                  onClick={() => selectCountry(c.id)}
                   onMouseEnter={() => {
                     // Highlight the country on the map, but don't float a
                     // map tooltip while the pointer is over the list.

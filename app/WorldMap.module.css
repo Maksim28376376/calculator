@@ -278,6 +278,124 @@
   font-variant-numeric: tabular-nums;
 }
 
+/* ---- left fighter panel ---- */
+
+.fighterPanel {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: min(340px, 88vw);
+  background: var(--panel);
+  border-right: 1px solid var(--border);
+  box-shadow: 24px 0 60px -30px rgba(0, 0, 0, 0.8);
+  transform: translateX(-104%);
+  transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.fighterOpen {
+  transform: translateX(0);
+}
+
+.fighterClose {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.25);
+  color: var(--text);
+  border-radius: 9px;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.12s ease;
+}
+
+.fighterClose:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.fighterArt {
+  /* subtle red spotlight behind the fighter, echoing the map's accent */
+  background: radial-gradient(
+    120% 90% at 50% 18%,
+    rgba(236, 77, 60, 0.22),
+    rgba(236, 77, 60, 0) 62%
+  );
+  padding: 26px 20px 6px;
+  display: flex;
+  justify-content: center;
+}
+
+.avatar {
+  width: 220px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 12px 22px rgba(0, 0, 0, 0.45));
+}
+
+.fighterInfo {
+  padding: 4px 22px 26px;
+}
+
+.fighterFlagline {
+  display: block;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.fighterName {
+  margin: 6px 0 0;
+  font-size: 25px;
+  font-weight: 750;
+  letter-spacing: -0.01em;
+  line-height: 1.12;
+  color: var(--text);
+}
+
+.fighterBio {
+  margin: 12px 0 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+.factCard {
+  margin-top: 18px;
+  padding: 13px 15px;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-border);
+  border-radius: 12px;
+}
+
+.factLabel {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 5px;
+}
+
+.factText {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--text);
+}
+
 @media (max-width: 860px) {
   .layout {
     grid-template-columns: 1fr;
@@ -287,5 +405,9 @@
   }
   .list {
     max-height: 320px;
+  }
+  .fighterPanel {
+    width: 100%;
+    max-width: 380px;
   }
 }
