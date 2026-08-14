@@ -4,7 +4,7 @@ An interactive world map showing how many UFC fighters come from each country,
 with a short note on every nation's scene. Built with
 [Next.js](https://nextjs.org) and [d3-geo](https://github.com/d3/d3-geo).
 
-**Live:** https://ufc-map-maksim-team.vercel.app
+**Live:** https://ufc-map.vercel.app
 
 ## Running it locally
 
