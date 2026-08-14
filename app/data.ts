@@ -350,6 +350,125 @@ export const countries: Country[] = [
     blurb:
       "A handful of fighters from the developing Alpine MMA scene.",
   },
+  {
+    id: "417",
+    name: "Kyrgyzstan",
+    count: 6,
+    blurb:
+      "Punches well above its size thanks to flyweight great Valentina Shevchenko.",
+  },
+  {
+    id: "352",
+    name: "Iceland",
+    count: 3,
+    blurb:
+      "Tiny population, real talent — led by cult-favorite welterweight Gunnar Nelson.",
+  },
+  {
+    id: "620",
+    name: "Portugal",
+    count: 5,
+    blurb:
+      "A developing scene riding Europe's MMA boom, with knockout artist André Fialho.",
+  },
+  {
+    id: "056",
+    name: "Belgium",
+    count: 5,
+    blurb:
+      "Home of former Strikeforce champion Tarec Saffiedine and a growing group of prospects.",
+  },
+  {
+    id: "703",
+    name: "Slovakia",
+    count: 3,
+    blurb:
+      "A small Central European contingent led by Ľudovít Klein.",
+  },
+  {
+    id: "440",
+    name: "Lithuania",
+    count: 3,
+    blurb:
+      "Baltic talent flying the flag at light heavyweight through Modestas Bukauskas.",
+  },
+  {
+    id: "498",
+    name: "Moldova",
+    count: 5,
+    blurb:
+      "Tough Eastern European fighters punching above their nation's size.",
+  },
+  {
+    id: "642",
+    name: "Romania",
+    count: 3,
+    blurb:
+      "A developing scene with a handful of fighters reaching the UFC.",
+  },
+  {
+    id: "862",
+    name: "Venezuela",
+    count: 4,
+    blurb:
+      "South American talent making its way onto the roster, led by Omar Morales.",
+  },
+  {
+    id: "388",
+    name: "Jamaica",
+    count: 3,
+    blurb:
+      "Small island, big personality — repped by welterweight “Rude Boy” Randy Brown.",
+  },
+  {
+    id: "496",
+    name: "Mongolia",
+    count: 3,
+    blurb:
+      "A wrestling-and-judo nation putting its stamp on the UFC through Danaa Batgerel.",
+  },
+  {
+    id: "360",
+    name: "Indonesia",
+    count: 2,
+    blurb:
+      "A huge new market opened up by its first UFC fighter, Jeka Saragih.",
+  },
+  {
+    id: "170",
+    name: "Colombia",
+    count: 4,
+    blurb:
+      "South American talent led by flyweight Sabina Mazo.",
+  },
+  {
+    id: "368",
+    name: "Iraq",
+    count: 2,
+    blurb:
+      "Represented at the top of the flyweight division by Baghdad-born Amir Albazi.",
+  },
+  {
+    id: "504",
+    name: "Morocco",
+    count: 3,
+    blurb:
+      "North African power carried by undefeated knockout artist Ottman Azaitar.",
+  },
+  {
+    id: "070",
+    name: "Bosnia and Herzegovina",
+    count: 3,
+    blurb:
+      "Birth nation of former top featherweight prospect Mirsad Bektić.",
+  },
+  {
+    id: "348",
+    name: "Hungary",
+    count: 3,
+    blurb:
+      "A small but growing scene with middleweight Norbert Növényi Jr.",
+  },
 ];
 
 export const totalFighters = countries.reduce((s, c) => s + c.count, 0);
