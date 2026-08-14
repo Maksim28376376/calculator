@@ -1,16 +1,10 @@
-import type { Metadata, Viewport } from "next";
+import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Calculator",
-  description: "A fast, keyboard-friendly calculator.",
-};
-
-export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f4f4f5" },
-    { media: "(prefers-color-scheme: dark)", color: "#0b0b0f" },
-  ],
+  title: "UFC Fighters by Country",
+  description:
+    "An interactive world map showing how many UFC fighters come from each country, with a short note on every nation's scene.",
 };
 
 export default function RootLayout({
