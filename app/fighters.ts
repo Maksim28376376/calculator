@@ -76,10 +76,10 @@ export const fighters: Record<string, Fighter> = {
     look: { skin: "#c98a5e", hair: "#111318", hairStyle: "buzz", facial: "stubble", trunks: "#0055a4", trunksAccent: "#ef4135", gloves: "#ffffff" },
   },
   "616": {
-    name: "Jan Błachowicz",
-    bio: "Former light heavyweight champion with legendary Polish power.",
-    fact: "Defended his title by out-pointing Israel Adesanya, handing “The Last Stylebender” his first pro loss.",
-    look: { skin: "#eab98f", hair: "#6a4a2a", hairStyle: "short", facial: "stubble", trunks: "#ffffff", trunksAccent: "#dc143c", gloves: "#dc143c" },
+    name: "Joanna Jędrzejczyk",
+    bio: "A UFC Hall of Famer and one of the greatest strikers in women's MMA.",
+    fact: "Dominated the strawweight division with five straight title defenses on her way to the Hall of Fame.",
+    look: { skin: "#eecb9a", hair: "#e8d29a", hairStyle: "ponytail", facial: "none", trunks: "#ffffff", trunksAccent: "#dc143c", gloves: "#dc143c", female: true },
   },
   "410": {
     name: "Chan Sung Jung",
@@ -316,10 +316,10 @@ export const fighters: Record<string, Fighter> = {
     look: { skin: "#eecb9a", hair: "#b5824a", hairStyle: "slick", facial: "fullbeard", trunks: "#02529c", trunksAccent: "#dc1e35", gloves: "#ffffff" },
   },
   "620": {
-    name: "André Fialho",
-    bio: "A come-forward Portuguese welterweight with heavy hands.",
-    fact: "Went on a flurry of knockouts in a single busy year, fighting anyone at short notice.",
-    look: { skin: "#d29a68", hair: "#111318", hairStyle: "short", facial: "beard", trunks: "#006600", trunksAccent: "#ff0000", gloves: "#ff0000" },
+    name: "Manel Kape",
+    bio: "An explosive, brash flyweight contender flying the Portuguese flag.",
+    fact: "A former RIZIN bantamweight champion who climbed into the UFC's top-ranked flyweights.",
+    look: { skin: "#6f4326", hair: "#111318", hairStyle: "buzz", facial: "none", trunks: "#006600", trunksAccent: "#ff0000", gloves: "#ff0000" },
   },
   "056": {
     name: "Tarec Saffiedine",

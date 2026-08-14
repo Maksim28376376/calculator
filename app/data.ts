@@ -89,7 +89,7 @@ export const countries: Country[] = [
     name: "Poland",
     count: 30,
     blurb:
-      "Deep talent across the cards, from former light heavyweight champion Jan Błachowicz to the late strawweight great Joanna Jędrzejczyk.",
+      "Deep talent across the cards, headlined by strawweight Hall of Famer Joanna Jędrzejczyk and former light heavyweight champion Jan Błachowicz.",
   },
   {
     id: "410",
@@ -369,7 +369,7 @@ export const countries: Country[] = [
     name: "Portugal",
     count: 5,
     blurb:
-      "A developing scene riding Europe's MMA boom, with knockout artist André Fialho.",
+      "A developing scene riding Europe's MMA boom, led by top flyweight contender Manel Kape.",
   },
   {
     id: "056",
