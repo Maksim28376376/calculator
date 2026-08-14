@@ -405,4 +405,46 @@ export const fighters: Record<string, Fighter> = {
     fact: "Earned his UFC contract on Dana White's Contender Series to carry Hungary's flag.",
     look: { skin: "#eab98f", hair: "#6a4a2a", hairStyle: "short", facial: "stubble", trunks: "#436f4d", trunksAccent: "#cd2a3e", gloves: "#ffffff" },
   },
+  "275": {
+    name: "Belal Muhammad",
+    bio: "An American-born welterweight champion who proudly represents his Palestinian heritage.",
+    fact: "Rode a long, years-spanning unbeaten streak all the way to the welterweight title in 2024.",
+    look: { skin: "#c98a5e", hair: "#111318", hairStyle: "short", facial: "beard", trunks: "#000000", trunksAccent: "#007a3d", gloves: "#ce1126" },
+  },
+  "784": {
+    name: "Khamzat Chimaev",
+    bio: "An undefeated, smothering wrecking machine now based in and representing the UAE.",
+    fact: "Famously won two UFC fights just 10 days apart during his explosive, undefeated rise.",
+    look: { skin: "#e8b98f", hair: "#111318", hairStyle: "short", facial: "beard", trunks: "#00843d", trunksAccent: "#ffffff", gloves: "#ce1126" },
+  },
+  "788": {
+    name: "Mounir Lazzez",
+    bio: "Tunisia's welterweight “Sniper,” a slick and durable striker.",
+    fact: "Announced himself by winning his UFC debut in an action-packed decision.",
+    look: { skin: "#d29a68", hair: "#111318", hairStyle: "short", facial: "beard", trunks: "#e70013", trunksAccent: "#ffffff", gloves: "#ffffff" },
+  },
+  "288": {
+    name: "Abdul Razak Alhassan",
+    bio: "A Ghanaian judo black belt with genuine one-punch knockout power.",
+    fact: "Opened his UFC career with a run of brutal first-round knockouts.",
+    look: { skin: "#4f3120", hair: "#111318", hairStyle: "buzz", facial: "none", trunks: "#006b3f", trunksAccent: "#fcd116", gloves: "#ce1126" },
+  },
+  "716": {
+    name: "Themba Gorimbo",
+    bio: "A Zimbabwean welterweight whose against-the-odds story inspired the MMA world.",
+    fact: "Rose from having just a few dollars in his bank account to a breakout UFC run.",
+    look: { skin: "#6f4326", hair: "#111318", hairStyle: "short", facial: "none", trunks: "#319400", trunksAccent: "#ffd200", gloves: "#000000" },
+  },
+  "004": {
+    name: "Nasrat Haqparast",
+    bio: "A lightweight carrying Afghan heritage into the octagon.",
+    fact: "A German-based fighter of Afghan descent known for sharp, high-volume boxing.",
+    look: { skin: "#d29a68", hair: "#111318", hairStyle: "slick", facial: "beard", trunks: "#000000", trunksAccent: "#d32011", gloves: "#007a36" },
+  },
+  "400": {
+    name: "Ali AlQaisi",
+    bio: "A Jordanian bantamweight and regional trailblazer.",
+    fact: "One of the first fighters to carry the Jordanian flag into the UFC.",
+    look: { skin: "#d29a68", hair: "#111318", hairStyle: "short", facial: "beard", trunks: "#000000", trunksAccent: "#ce1126", gloves: "#007a3d" },
+  },
 };

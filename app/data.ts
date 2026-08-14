@@ -469,6 +469,55 @@ export const countries: Country[] = [
     blurb:
       "A small but growing scene with middleweight Norbert Növényi Jr.",
   },
+  {
+    id: "275",
+    name: "Palestine",
+    count: 3,
+    blurb:
+      "Represented on the biggest stage by welterweight champion Belal Muhammad.",
+  },
+  {
+    id: "784",
+    name: "United Arab Emirates",
+    count: 4,
+    blurb:
+      "A fast-rising MMA hub and the new home base of undefeated star Khamzat Chimaev.",
+  },
+  {
+    id: "788",
+    name: "Tunisia",
+    count: 3,
+    blurb:
+      "North African talent led by welterweight “Sniper” Mounir Lazzez.",
+  },
+  {
+    id: "288",
+    name: "Ghana",
+    count: 3,
+    blurb:
+      "Home of judoka and knockout artist Abdul Razak Alhassan.",
+  },
+  {
+    id: "716",
+    name: "Zimbabwe",
+    count: 2,
+    blurb:
+      "Punching far above its weight through inspirational welterweight Themba Gorimbo.",
+  },
+  {
+    id: "004",
+    name: "Afghanistan",
+    count: 2,
+    blurb:
+      "Carried into the octagon by lightweight Nasrat Haqparast, of Afghan heritage.",
+  },
+  {
+    id: "400",
+    name: "Jordan",
+    count: 2,
+    blurb:
+      "An emerging Middle Eastern scene with bantamweight trailblazer Ali AlQaisi.",
+  },
 ];
 
 export const totalFighters = countries.reduce((s, c) => s + c.count, 0);
