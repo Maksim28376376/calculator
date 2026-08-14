@@ -2,6 +2,8 @@
 
 A small, keyboard-friendly calculator built with [Next.js](https://nextjs.org).
 
+**Live:** https://calculator-three-pi-96.vercel.app
+
 ## Running it locally
 
 ```bash
